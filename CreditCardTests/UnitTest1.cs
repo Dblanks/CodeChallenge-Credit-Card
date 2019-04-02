@@ -61,17 +61,17 @@ namespace CreditCardTests
 
 
             wallet1.CalculateSimpleInterest(person, cc);
-            var wallet1_SI = wallet1.Value;
+            var firstPersonWallet = wallet1.Value;
 
             wallet2.CalculateSimpleInterest(person, cc);
-            var wallet2_SI = wallet2.Value;
+            var secondPersonWallet = wallet2.Value;
 
             var totalInterest = wallet1.Value + wallet2.Value;
 
 
             Assert.AreEqual(totalInterest, 16);
-            Assert.AreEqual(wallet1_SI, 11);
-            Assert.AreEqual(wallet2_SI, 5);
+            Assert.AreEqual(firstPersonWallet, 11);
+            Assert.AreEqual(secondPersonWallet, 5);
            
         }
 
